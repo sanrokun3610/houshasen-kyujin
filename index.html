@@ -619,6 +619,19 @@
     });
   });
   function fallback(txt,cb){ try{ var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); cb(); }catch(e){} }
+
+  var rGuide=document.getElementById('raru-guide');
+  function toggleGuide(force){
+    if(!rGuide) return;
+    var hidden=(rGuide.style.display==='none' || rGuide.style.display==='');
+    var show=(typeof force==='boolean') ? force : hidden;
+    rGuide.style.display = show ? 'block':'none';
+    if(show){ rGuide.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+  }
+  var rImg=document.getElementById('raru-img'), rHint=document.getElementById('raru-hint'), rClose=document.getElementById('raru-guide-close');
+  if(rImg) rImg.addEventListener('click', function(){ toggleGuide(); });
+  if(rHint) rHint.addEventListener('click', function(){ toggleGuide(); });
+  if(rClose) rClose.addEventListener('click', function(){ toggleGuide(false); });
 })();
 </script>
 </body>
