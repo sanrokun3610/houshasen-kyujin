@@ -648,6 +648,14 @@
     window.location.href='mailto:rinorasu@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     if(rqMsg) rqMsg.textContent='メールが開いたら送信してね📨';
   });
+
+  var qaToggle=document.getElementById('raru-qa-toggle'), qaList=document.getElementById('raru-qa');
+  if(qaToggle && qaList) qaToggle.addEventListener('click', function(){
+    var show=(qaList.style.display==='none' || qaList.style.display==='');
+    qaList.style.display = show ? 'block':'none';
+    qaToggle.setAttribute('aria-expanded', show ? 'true':'false');
+    qaToggle.innerHTML = '<i class="ti ti-messages" aria-hidden="true" style="margin-right:5px;"></i>みんなの質問とラルちゃんの回答' + (show ? 'を閉じる －':'を見る ＋');
+  });
 })();
 </script>
 </body>
