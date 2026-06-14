@@ -100,6 +100,26 @@
   </div>
 </div>
 
+<div style="margin:16px 0 2px;">
+  <p class="seclabel" style="margin:0 2px 8px;"><i class="ti ti-movie" aria-hidden="true"></i>病院紹介ムービー（公式YouTube）</p>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
+    <a href="https://youtu.be/DiQKgr-hjr8" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:11px; background:var(--bg); border:0.5px solid var(--bd); border-left:4px solid #c4302b; border-radius:0 12px 12px 0; padding:11px 14px;">
+      <i class="ti ti-brand-youtube" aria-hidden="true" style="font-size:24px; color:#c4302b; flex:0 0 auto;"></i>
+      <span style="line-height:1.4;">
+        <span style="display:block; font-size:13.5px; font-weight:500; color:var(--tp);">松波総合病院</span>
+        <span style="display:block; font-size:11.5px; color:var(--sec);">Apple取材ムービー ・ 岐阜（蘇西厚生会）</span>
+      </span>
+    </a>
+    <a href="https://youtu.be/_hhyFp6DRAA" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:11px; background:var(--bg); border:0.5px solid var(--bd); border-left:4px solid #c4302b; border-radius:0 12px 12px 0; padding:11px 14px;">
+      <i class="ti ti-brand-youtube" aria-hidden="true" style="font-size:24px; color:#c4302b; flex:0 0 auto;"></i>
+      <span style="line-height:1.4;">
+        <span style="display:block; font-size:13.5px; font-weight:500; color:var(--tp);">一宮西病院</span>
+        <span style="display:block; font-size:11.5px; color:var(--sec);">病院紹介ムービー ・ 愛知（杏嶺会）</span>
+      </span>
+    </a>
+  </div>
+</div>
+
 <div class="tabbar" role="tablist" aria-label="地域タブ">
   <button class="tab" role="tab" data-tab="calendar"><i class="ti ti-calendar-event" aria-hidden="true" style="margin-right:3px;"></i>締切カレンダー</button>
   <button class="tab" role="tab" data-tab="aichi">愛知<span class="n">3+</span></button>
@@ -117,7 +137,12 @@
 </div>
 
 <section class="tab-panel" id="panel-calendar" role="tabpanel">
-  <p class="panel-head">2027卒の締切・試験を時系列で（日付はすべて2026年）。<span style="color:var(--amber-tx);">●</span>締切 ／ <span style="color:var(--teal-tx);">●</span>試験・選考。締切が近い順に動くのがおすすめ。</p>
+  <p class="panel-head">本日6/14時点で<span style="font-weight:500; color:var(--tp);">受付中のものだけ</span>を時系列で（日付は2026年）。<span style="color:var(--amber-tx);">●</span>締切 ／ <span style="color:var(--teal-tx);">●</span>試験・選考。締切が近い順に動こう。</p>
+
+  <div class="calmonth">6月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">6/18</span><span class="cc"><span class="ctag sime">締切まもなく</span>大垣市民病院<span class="creg">岐阜・903床／一次試験7/12</span></span></li>
+  </ol>
 
   <div class="calmonth">7月</div>
   <ol class="cal">
@@ -132,6 +157,7 @@
   <div class="calmonth">8月</div>
   <ol class="cal">
     <li class="cevt"><span class="cd">8/1</span><span class="cc"><span class="ctag shik">一次試験</span>東京慈恵会医科大学<span class="creg">東京</span></span></li>
+    <li class="cevt"><span class="cd">8/3</span><span class="cc"><span class="ctag shik">一次(書類)</span>東京医科大学病院<span class="creg">東京</span></span></li>
     <li class="cevt"><span class="cd">8/4</span><span class="cc"><span class="ctag shik">二次審査</span>成田赤十字病院<span class="creg">千葉</span></span></li>
     <li class="cevt"><span class="cd">8/5</span><span class="cc"><span class="ctag shik">一次試験</span>国立病院機構 関東信越<span class="creg">首都圏一括</span></span></li>
     <li class="cevt"><span class="cd">8/12</span><span class="cc"><span class="ctag sime">締切</span>公立昭和病院<span class="creg">東京小平・約518床</span></span></li>
@@ -147,7 +173,7 @@
 
   <div class="calmonth">10月</div>
   <ol class="cal">
-    <li class="cevt"><span class="cd">10/2</span><span class="cc"><span class="ctag sime">応募開始</span>松波総合病院<span class="creg">岐阜・約500床</span></span></li>
+    <li class="cevt"><span class="cd">10/2</span><span class="cc"><span class="ctag sime">締切</span>松波総合病院<span class="creg">岐阜・約500床</span></span></li>
     <li class="cevt"><span class="cd">10/9</span><span class="cc"><span class="ctag shik">選考(面接)</span>松波総合病院<span class="creg">岐阜</span></span></li>
   </ol>
 
@@ -156,21 +182,22 @@
     <li class="cevt"><span class="cd">11月</span><span class="cc"><span class="ctag shik">選考</span>戸田中央総合病院（TMG）<span class="creg">埼玉・517床</span></span></li>
   </ol>
 
-  <p class="note"><i class="ti ti-clock-search" aria-hidden="true" style="margin-right:5px; color:var(--amber-mid);"></i>日程未確定（要確認）：愛知＝江南厚生・岡崎市民・名古屋医療センター・藤田／岐阜＝大垣市民・多治見ほか。判明し次第このカレンダーに追加します。<br><i class="ti ti-circle-x" aria-hidden="true" style="margin-right:5px; color:var(--ter);"></i>中部国際医療センター（岐阜・502床）は締切5/29で今期終了。</p>
+  <p class="note"><i class="ti ti-circle-x" aria-hidden="true" style="margin-right:5px; color:var(--ter);"></i><span style="font-weight:500;color:var(--tp);">今期は締切済み（公立・厚生連は5〜6月締切＝来年はこの時期を死守）</span>：愛知＝江南厚生(書類5/27)・名古屋医療センター(6/5)・岡崎市民・安城更生(5/21)／神奈川＝川崎市立川崎(6/5)／埼玉＝自治医大さいたま(試験6/17)／東京都立病院機構／岐阜＝中部国際(5/29)。<br><i class="ti ti-clock-search" aria-hidden="true" style="margin-right:5px; color:var(--amber-mid);"></i><span style="font-weight:500;color:var(--tp);">公示前（近く出る・要監視）</span>：藤田医科大学・岐阜県立多治見・千葉県病院局・東海大学 ほか。各地域タブの連絡先で確認を。</p>
 </section>
 
 <section class="tab-panel" id="panel-aichi" role="tabpanel">
-  <p class="panel-head">愛知県：2027卒 募集中（江南厚生・名古屋医療センター・藤田）。岡崎市民は締切済みの可能性、一宮西は要問い合わせ。</p>
+  <p class="panel-head">⚠ 愛知の大規模病院は2027卒の締切がほぼ終了（公立・厚生連は5〜6月締切）。<span style="font-weight:500;color:var(--tp);">現在 確実に受付中の枠はなし</span>。一宮西は要問い合わせ、藤田は公示前。</p>
 
-  <div class="card open">
-    <div class="card-h"><span class="hname">江南厚生病院</span><span class="pill ok">2027卒 募集中</span></div>
-    <div class="sub">JA愛知厚生連 ・ 江南市 ・ 684床</div>
+  <div class="card check">
+    <div class="card-h"><span class="hname">一宮西病院</span><span class="pill warn">要問い合わせ</span></div>
+    <div class="sub">社会医療法人 杏嶺会 ・ 一宮市 ・ 801床（急性期）</div>
     <div class="facts">
-      <div class="t"><p class="k">採用</p><p class="v">正職員3名</p></div>
-      <div class="t"><p class="k">採用日</p><p class="v">2027/4/1</p></div>
-      <div class="t"><p class="k">締切/試験</p><p class="v">求人票・要確認</p></div>
+      <div class="t"><p class="k">2027卒</p><p class="v">未掲載</p></div>
+      <div class="t"><p class="k">直近実績</p><p class="v">2026年4月採用</p></div>
+      <div class="t"><p class="k">初任給</p><p class="v">月19万円〜</p></div>
     </div>
-    <p class="contact"><i class="ti ti-phone" aria-hidden="true"></i>診療放射線室 0587-51-3333（平日9-17時）</p>
+    <p class="contact"><i class="ti ti-external-link" aria-hidden="true"></i><a href="https://req.qubo.jp/anzu/form/inquiry" target="_blank" rel="noopener">お問い合わせフォーム（杏嶺会）</a></p>
+    <p class="contact" style="margin-top:4px;">初任給=基本170,000＋資格手当20,000（2026実績）。例年は夏〜秋とみられる。</p>
   </div>
 
   <div class="card check">
