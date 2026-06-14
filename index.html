@@ -60,6 +60,15 @@
   .note{background:var(--bg2); border-radius:10px; padding:10px 13px; font-size:11.5px; color:var(--sec); line-height:1.6; margin:14px 0 0;}
   .src{border-top:0.5px solid var(--bd); padding-top:12px; margin-top:22px;}
   .src .u{font-size:11px; color:var(--ter); word-break:break-all;}
+  .calmonth{font-size:12px; font-weight:500; color:var(--sec); margin:16px 2px 2px;}
+  .cal{list-style:none; padding:0; margin:0;}
+  .cevt{display:grid; grid-template-columns:46px 1fr; gap:12px; align-items:baseline; padding:8px 2px; border-bottom:0.5px solid var(--bd);}
+  .cd{font-size:13.5px; font-weight:500; white-space:nowrap;}
+  .cc{font-size:12.5px;}
+  .ctag{display:inline-block; font-size:11px; font-weight:500; border-radius:5px; padding:1px 7px; margin-right:7px;}
+  .ctag.sime{background:var(--amber-bg); color:var(--amber-tx);}
+  .ctag.shik{background:var(--teal-bg); color:var(--teal-tx);}
+  .creg{font-size:11px; color:var(--ter); margin-left:5px;}
   .updated{text-align:center; font-size:11px; color:var(--ter); margin:18px 0 0;}
 </style>
 </head>
@@ -86,6 +95,7 @@
 </div>
 
 <div class="tabbar" role="tablist" aria-label="地域タブ">
+  <button class="tab" role="tab" data-tab="calendar"><i class="ti ti-calendar-event" aria-hidden="true" style="margin-right:3px;"></i>締切カレンダー</button>
   <button class="tab" role="tab" data-tab="aichi">愛知<span class="n">4+</span></button>
   <button class="tab" role="tab" data-tab="gifu">岐阜<span class="n">1+</span></button>
   <button class="tab" role="tab" data-tab="tokyo">東京<span class="n">3+</span></button>
@@ -98,6 +108,49 @@
   <span><span class="dot" style="background:var(--amber-mid);"></span>例年実施・要確認</span>
   <span><span class="dot" style="background:#b4b2a9;"></span>今期終了</span>
 </div>
+
+<section class="tab-panel" id="panel-calendar" role="tabpanel">
+  <p class="panel-head">2027卒の締切・試験を時系列で（日付はすべて2026年）。<span style="color:var(--amber-tx);">●</span>締切 ／ <span style="color:var(--teal-tx);">●</span>試験・選考。締切が近い順に動くのがおすすめ。</p>
+
+  <div class="calmonth">7月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">7/7</span><span class="cc"><span class="ctag sime">締切</span>済生会横浜市東部病院<span class="creg">神奈川・560床</span></span></li>
+    <li class="cevt"><span class="cd">7/8</span><span class="cc"><span class="ctag sime">締切</span>成田赤十字病院<span class="creg">千葉・約690床</span></span></li>
+    <li class="cevt"><span class="cd">7/10</span><span class="cc"><span class="ctag sime">締切</span>東京慈恵会医科大学<span class="creg">東京・本院1,075床</span></span></li>
+    <li class="cevt"><span class="cd">7/15</span><span class="cc"><span class="ctag sime">締切</span>国立病院機構 関東信越（提出期限）<span class="creg">首都圏一括</span></span></li>
+    <li class="cevt"><span class="cd">7/17</span><span class="cc"><span class="ctag sime">締切</span>東京医科大学病院<span class="creg">東京・904床</span></span></li>
+    <li class="cevt"><span class="cd">7/25</span><span class="cc"><span class="ctag shik">二次選考</span>済生会横浜市東部病院<span class="creg">神奈川</span></span></li>
+  </ol>
+
+  <div class="calmonth">8月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">8/1</span><span class="cc"><span class="ctag shik">一次試験</span>東京慈恵会医科大学<span class="creg">東京</span></span></li>
+    <li class="cevt"><span class="cd">8/4</span><span class="cc"><span class="ctag shik">二次審査</span>成田赤十字病院<span class="creg">千葉</span></span></li>
+    <li class="cevt"><span class="cd">8/5</span><span class="cc"><span class="ctag shik">一次試験</span>国立病院機構 関東信越<span class="creg">首都圏一括</span></span></li>
+    <li class="cevt"><span class="cd">8/12</span><span class="cc"><span class="ctag sime">締切</span>公立昭和病院<span class="creg">東京小平・約518床</span></span></li>
+    <li class="cevt"><span class="cd">8/22</span><span class="cc"><span class="ctag shik">二次試験</span>東京慈恵会医科大学<span class="creg">東京</span></span></li>
+    <li class="cevt"><span class="cd">8/27</span><span class="cc"><span class="ctag shik">一次試験</span>公立昭和病院<span class="creg">東京</span></span></li>
+  </ol>
+
+  <div class="calmonth">9月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">9/18</span><span class="cc"><span class="ctag shik">二次・三次</span>公立昭和病院<span class="creg">東京</span></span></li>
+    <li class="cevt"><span class="cd">9/25</span><span class="cc"><span class="ctag shik">二次試験</span>国立病院機構 関東信越<span class="creg">首都圏一括</span></span></li>
+  </ol>
+
+  <div class="calmonth">10月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">10/2</span><span class="cc"><span class="ctag sime">応募開始</span>松波総合病院<span class="creg">岐阜・約500床</span></span></li>
+    <li class="cevt"><span class="cd">10/9</span><span class="cc"><span class="ctag shik">選考(面接)</span>松波総合病院<span class="creg">岐阜</span></span></li>
+  </ol>
+
+  <div class="calmonth">11月</div>
+  <ol class="cal">
+    <li class="cevt"><span class="cd">11月</span><span class="cc"><span class="ctag shik">選考</span>戸田中央総合病院（TMG）<span class="creg">埼玉・517床</span></span></li>
+  </ol>
+
+  <p class="note"><i class="ti ti-clock-search" aria-hidden="true" style="margin-right:5px; color:var(--amber-mid);"></i>日程未確定（要確認）：愛知＝江南厚生・岡崎市民・名古屋医療センター・藤田／岐阜＝大垣市民・多治見ほか。判明し次第このカレンダーに追加します。<br><i class="ti ti-circle-x" aria-hidden="true" style="margin-right:5px; color:var(--ter);"></i>中部国際医療センター（岐阜・502床）は締切5/29で今期終了。</p>
+</section>
 
 <section class="tab-panel" id="panel-aichi" role="tabpanel">
   <p class="panel-head">愛知県：2027卒 募集中を複数確認（江南厚生・岡崎市民・名古屋医療センター・藤田）。一宮西は要問い合わせ。</p>
@@ -388,7 +441,7 @@
     panels.forEach(function(p){ p.style.display = (p.id==='panel-'+id) ? 'block':'none'; });
   }
   tabs.forEach(function(t){ t.addEventListener('click', function(){ activate(t.getAttribute('data-tab')); }); });
-  activate('aichi');
+  activate('calendar');
 })();
 </script>
 </body>
