@@ -104,6 +104,24 @@
   </div>
 </div>
 
+<div class="card" style="border-left-color:var(--teal-mid); border-radius:14px; margin:8px 0 14px;">
+  <p class="seclabel" style="margin:0 2px 7px;"><i class="ti ti-message-2-question" aria-hidden="true" style="color:var(--teal-tx);"></i>ラルちゃんに質問する</p>
+  <p style="font-size:12px; color:var(--sec); margin:0 2px 9px;">見学・募集・国家試験など、気になることを書いて送ってね。ラルちゃん（中の人）が見て、Q&Aにお返事を追加していくのだ📮</p>
+  <textarea id="raru-q" rows="2" placeholder="例：見学のとき何を持っていけばいい？／初任給はいつわかる？" style="width:100%; box-sizing:border-box; font-family:inherit; font-size:13px; color:var(--tp); border:0.5px solid var(--bd2); border-radius:10px; padding:10px; resize:vertical;"></textarea>
+  <div style="display:flex; align-items:center; gap:10px; margin-top:8px; flex-wrap:wrap;">
+    <button id="raru-q-send" type="button" style="font-family:inherit; font-size:13px; background:var(--teal-mid); color:#fff; border:0; border-radius:9px; padding:8px 16px; cursor:pointer;"><i class="ti ti-send" aria-hidden="true" style="margin-right:5px;"></i>ラルちゃんに送る（メール）</button>
+    <span id="raru-q-msg" style="font-size:11.5px; color:var(--teal-tx);"></span>
+  </div>
+  <button id="raru-qa-toggle" type="button" aria-expanded="false" style="margin-top:12px; font-family:inherit; font-size:12.5px; color:var(--info); background:none; border:0; padding:3px 2px; cursor:pointer;"><i class="ti ti-messages" aria-hidden="true" style="margin-right:5px;"></i>みんなの質問とラルちゃんの回答を見る ＋</button>
+  <div id="raru-qa" class="rowlist" style="display:none; margin-top:9px;">
+    <div class="row"><span class="rn">Q. 見学のとき、何を持っていけばいい？</span><span class="rc">A. 筆記用具・メモ・スケジュール帳があれば十分なのだ。服装はスーツが無難（無ければ清潔なオフィスカジュアル）。A4が入るカバンと、事前にもらった案内があれば印刷して持っていくと安心なのだ。</span></div>
+    <div class="row"><span class="rn">Q. 初任給はいつ・どうやってわかる？</span><span class="rc">A. 求人票・説明会、または直接問い合わせで分かるのだ。松波は非公開なので電話で確認、一宮西は2026年実績で月19万円〜（基本17万＋資格手当2万）なのだ。</span></div>
+    <div class="row"><span class="rn">Q. 一宮西病院の2027卒募集はいつ出る？</span><span class="rc">A. 今は公式未掲載なのだ。例年は夏〜秋とみられるので、杏嶺会のお問い合わせフォームで「2027卒の予定」を聞くのが確実なのだ。</span></div>
+    <div class="row"><span class="rn">Q. 国家試験の勉強と就活、両立のコツは？</span><span class="rc">A. 募集中の病院は締切が夏〜秋に集中するのだ。「締切カレンダー」で日程を押さえ、早めにエントリー＆見学予約しておくと、後半を試験勉強に充てられるのだ。</span></div>
+    <p class="contact" style="margin:8px 2px 0;"><i class="ti ti-bulb" aria-hidden="true" style="color:var(--amber-mid);"></i>このQ&Aは届いた質問をもとに少しずつ増やしていくのだ。</p>
+  </div>
+</div>
+
 <div id="raru-guide" style="display:none; margin:6px 0 10px;">
   <div class="card" style="border-left-color:var(--teal-mid); border-radius:14px;">
     <div class="card-h" style="margin-bottom:8px;">
