@@ -640,13 +640,23 @@
   if(rClose) rClose.addEventListener('click', function(){ toggleGuide(false); });
 
   var rq=document.getElementById('raru-q'), rqSend=document.getElementById('raru-q-send'), rqMsg=document.getElementById('raru-q-msg');
+  function setMsg(txt,col){ if(rqMsg){ rqMsg.style.color=col||'var(--teal-tx)'; rqMsg.textContent=txt; } }
   if(rqSend) rqSend.addEventListener('click', function(){
     var q=(rq && rq.value || '').trim();
-    if(!q){ if(rqMsg) rqMsg.textContent='質問を入力してね'; if(rq) rq.focus(); return; }
-    var subject='ラルちゃんへの質問（放射線技師求人ページ）';
-    var body=q+'\n\n----\nこのメールをそのまま送信すると、ラルちゃんに質問が届きます。';
-    window.location.href='mailto:rinorasu@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-    if(rqMsg) rqMsg.textContent='メールが開いたら送信してね📨';
+    if(!q){ setMsg('質問を入力してね','var(--amber-tx)'); if(rq) rq.focus(); return; }
+    rqSend.disabled=true; setMsg('送信中…','var(--sec)');
+    fetch('https://formsubmit.co/ajax/rinorasu@gmail.com', {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json', 'Accept':'application/json' },
+      body: JSON.stringify({ 質問: q, _subject:'ラルちゃんへの質問（放射線技師求人ページ）', _template:'table', _captcha:'false' })
+    }).then(function(r){ return r.json(); }).then(function(){
+      setMsg('送信できたのだ！ありがとう📨','var(--teal-tx)');
+      if(rq) rq.value='';
+      rqSend.disabled=false;
+    }).catch(function(){
+      setMsg('送信に失敗したのだ…少し待って もう一度ためしてね','var(--amber-tx)');
+      rqSend.disabled=false;
+    });
   });
 
   var qaToggle=document.getElementById('raru-qa-toggle'), qaList=document.getElementById('raru-qa');
