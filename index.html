@@ -69,6 +69,12 @@
   .ctag.sime{background:var(--amber-bg); color:var(--amber-tx);}
   .ctag.shik{background:var(--teal-bg); color:var(--teal-tx);}
   .creg{font-size:11px; color:var(--ter); margin-left:5px;}
+  .tplcard{background:var(--bg); border:0.5px solid var(--bd); border-radius:14px; padding:13px 15px; margin-bottom:14px;}
+  .tplhead{display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px;}
+  .tpltitle{font-size:14px; font-weight:500;}
+  .copybtn{font-family:inherit; font-size:12px; color:var(--info); background:var(--bg); border:0.5px solid var(--bd2); border-radius:8px; padding:5px 12px; cursor:pointer; white-space:nowrap;}
+  .copybtn:active{transform:scale(.98);}
+  .tpl{white-space:pre-wrap; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px; line-height:1.6; background:var(--bg2); border-radius:10px; padding:12px; margin:0; overflow-wrap:anywhere;}
   .updated{text-align:center; font-size:11px; color:var(--ter); margin:18px 0 0;}
 </style>
 </head>
@@ -102,6 +108,7 @@
   <button class="tab" role="tab" data-tab="kanagawa">神奈川<span class="n">1+</span></button>
   <button class="tab" role="tab" data-tab="saitama">埼玉<span class="n">2+</span></button>
   <button class="tab" role="tab" data-tab="chiba">千葉<span class="n">2+</span></button>
+  <button class="tab" role="tab" data-tab="inquiry"><i class="ti ti-mail" aria-hidden="true" style="margin-right:3px;"></i>問い合わせ文面</button>
 </div>
 <div class="legend">
   <span><span class="dot" style="background:var(--teal-mid);"></span>2027卒 募集中（公式確認）</span>
@@ -404,6 +411,73 @@
   </div>
 </section>
 
+<section class="tab-panel" id="panel-inquiry" role="tabpanel">
+  <p class="panel-head"><span style="color:var(--amber-tx);">〇〇</span>を自分の情報に置き換えて使ってください。「コピー」ボタンでそのまま貼り付けできます。</p>
+
+  <div class="tplcard">
+    <div class="tplhead"><span class="tpltitle"><i class="ti ti-phone" aria-hidden="true" style="margin-right:5px; color:var(--sec);"></i>電話スクリプト（要確認の病院に「2027卒あるか」を聞く）</span><button class="copybtn" data-copy="tpl-tel">コピー</button></div>
+    <pre class="tpl" id="tpl-tel">【最初のひとこと】
+お忙しいところ恐れ入ります。新卒採用について
+お伺いしたく、採用ご担当の部署はいらっしゃいますか。
+
+【担当者に代わったら】
+〇〇大学 診療放射線技術学科〇年の〇〇と申します。
+2027年3月卒業見込みで、貴院の診療放射線技師職を
+志望しております。3点ほど確認させてください。
+ ① 2027年4月入職の新卒採用はありますか
+ ② ある場合、応募開始時期と採用試験の日程
+ ③ 病院見学・インターンは可能でしょうか
+
+【締め】
+ありがとうございます。詳細はあらためて確認いたします。
+失礼いたします。</pre>
+  </div>
+
+  <div class="tplcard">
+    <div class="tplhead"><span class="tpltitle"><i class="ti ti-mail" aria-hidden="true" style="margin-right:5px; color:var(--sec);"></i>メール／フォーム文面（募集状況の問い合わせ）</span><button class="copybtn" data-copy="tpl-mail">コピー</button></div>
+    <pre class="tpl" id="tpl-mail">件名：2027年新卒 診療放射線技師 採用に関するお問い合わせ
+
+〇〇病院 採用ご担当者さま
+
+突然のご連絡失礼いたします。
+〇〇大学（〇〇学部 診療放射線技術学科）〇年の〇〇と申します。
+2027年3月卒業見込みで、貴院の診療放射線技師（新卒）を
+志望しております。下記についてご教示いただけますと幸いです。
+
+1. 2027年卒（2027年4月入職）の採用予定の有無
+2. 応募開始時期・締切・採用試験の日程
+3. 選考方法（面接のほか筆記・小論文の有無）
+4. 新卒の初任給・採用予定人数
+5. 病院見学・説明会の予定
+
+お忙しいところ恐縮ですが、ご返信よろしくお願いいたします。
+
+氏名：〇〇 〇〇／学校：〇〇大学 〇年
+電話：〇〇〇-〇〇〇〇-〇〇〇〇／メール：〇〇＠〇〇</pre>
+  </div>
+
+  <div class="tplcard">
+    <div class="tplhead"><span class="tpltitle"><i class="ti ti-send" aria-hidden="true" style="margin-right:5px; color:var(--sec);"></i>エントリー・見学申込（募集中の病院へ）</span><button class="copybtn" data-copy="tpl-entry">コピー</button></div>
+    <pre class="tpl" id="tpl-entry">件名：診療放射線技師（2027卒）エントリー・見学のお願い
+
+〇〇病院 採用ご担当者さま
+
+〇〇大学 診療放射線技術学科〇年の〇〇と申します。
+貴院の2027年卒 診療放射線技師の募集を拝見し、
+ぜひ応募を希望しております。つきましては下記を
+お願いできますでしょうか。
+・応募書類（指定様式の有無）と提出方法のご確認
+・病院見学の可否と日程のご相談
+
+お忙しいところ恐縮ですが、よろしくお願いいたします。
+
+氏名：〇〇 〇〇／学校：〇〇大学 〇年
+電話：〇〇〇-〇〇〇〇-〇〇〇〇／メール：〇〇＠〇〇</pre>
+  </div>
+
+  <p class="note"><i class="ti ti-bulb" aria-hidden="true" style="margin-right:5px; color:var(--amber-mid);"></i>使い分け：🟢募集中の病院（東京医大・慈恵・成田赤十字・済生会横浜市東部・江南厚生 等）には「エントリー・見学申込」、🟡要確認の病院には「電話スクリプト」か「メール文面」がおすすめ。各病院の連絡先は地域タブに記載しています。</p>
+</section>
+
 <div class="note">
   <i class="ti ti-bulb" aria-hidden="true" style="margin-right:5px; color:var(--amber-mid);"></i>
   <span style="font-weight:500; color:var(--tp);">読み方</span>：🟢=公式で2027卒募集を確認／🟡=例年実施だが2027要項が未公示（夏〜秋に出る傾向）→各公式ページを再確認／⚪=今期終了。放射線技師は採用枠が小さい（若干名）ので、気になる病院は早めに直接問い合わせを。病床数は公開情報ベースの目安です。
@@ -442,6 +516,17 @@
   }
   tabs.forEach(function(t){ t.addEventListener('click', function(){ activate(t.getAttribute('data-tab')); }); });
   activate('calendar');
+
+  [].slice.call(document.querySelectorAll('.copybtn')).forEach(function(b){
+    b.addEventListener('click', function(){
+      var el=document.getElementById(b.getAttribute('data-copy'));
+      if(!el) return;
+      var txt=el.innerText, done=function(){ var o=b.textContent; b.textContent='コピーしました'; setTimeout(function(){ b.textContent=o; },1600); };
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(txt,done); }); }
+      else { fallback(txt,done); }
+    });
+  });
+  function fallback(txt,cb){ try{ var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); cb(); }catch(e){} }
 })();
 </script>
 </body>
