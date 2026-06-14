@@ -1,0 +1,8 @@
+{
+  "$comment": "薬速管制台オフィス連動。このリポジトリ(houshasen-kyujin=放射線技師 新卒求人調査)で作業すると『ラル』が点灯する。OFFICE_TASK_ID で hook の no-op ゲートを開ける。詳細: yakusoku-control-center/docs/OFFICE_HOOKS.md",
+  "env": {
+    "OFFICE_TASK_ID": "sess-houshasen-kyujin-local",
+    "OFFICE_AGENT_ID": "raru",
+    "OFFICE_PROJECT_ID": "houshasen-kyujin"
+  }
+}
