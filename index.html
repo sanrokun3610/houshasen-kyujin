@@ -555,9 +555,21 @@
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('.tab'));
   var panels=[].slice.call(document.querySelectorAll('.tab-panel'));
+  var legDefs={ ok:'🟢=公式で2027卒募集を確認', warn:'🟡=例年実施だが2027要項が未公示（夏〜秋に出る傾向）→各公式ページを再確認', end:'⚪=今期終了' };
+  function updateLegend(id){
+    var panel=document.getElementById('panel-'+id), note=document.getElementById('legend-note'), syms=document.getElementById('legend-syms');
+    if(!panel || !note || !syms) return;
+    var present=[];
+    if(panel.querySelector('.pill.ok')) present.push(legDefs.ok);
+    if(panel.querySelector('.pill.warn, .rs.warn')) present.push(legDefs.warn);
+    if(panel.querySelector('.pill.end, .rs.end')) present.push(legDefs.end);
+    if(present.length){ syms.textContent=present.join('／')+'。'; note.style.display=''; }
+    else { note.style.display='none'; }
+  }
   function activate(id){
     tabs.forEach(function(t){ t.setAttribute('aria-selected', t.getAttribute('data-tab')===id ? 'true':'false'); });
     panels.forEach(function(p){ p.style.display = (p.id==='panel-'+id) ? 'block':'none'; });
+    updateLegend(id);
   }
   tabs.forEach(function(t){ t.addEventListener('click', function(){ activate(t.getAttribute('data-tab')); }); });
   activate('top');
